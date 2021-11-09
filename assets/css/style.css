@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* BURGER MENU */
+
+#burgerMenuContainer{
+    margin: 25px 0 0 0;
+    width: 50px;
+    float: right;
+    padding-right: 70px;
+}
+
+#burgerMenu{
+    cursor: pointer;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+#burgerMenu span{
+    background: black;
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 0;
+    transition: all ease-in-out 0.4s;
+}
+
+#burgerMenuContainer.open span:nth-child(2){
+    width: 0;
+    opacity: 0;
+}
+
+#burgerMenuContainer.open span:nth-child(3){
+    transform: rotate(45deg);
+    top: -13px;
+}
+
+#burgerMenuContainer.open span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 13px;
+}
+
+#burgerMenu:hover .hover{
+    background: #666666;
+}
+
+/* ========================================= */
+
+/* Navigationsleiste */
+
+#headerContainer ul{
+    padding: 1.3% 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#headerContainer ul li{
+    list-style:none;
+    padding: 0 1%;
+    font-size: 2rem;
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: 1s ease;
+}
+
+#headerContainer.toggle ul li:nth-of-type(1){
+    transition-delay: .9s;
+    opacity: 1;
+    max-width: 100%;
+    overflow: visible;
+}
+
+#headerContainer.toggle ul li:nth-of-type(2){
+    transition-delay: .6s;
+    opacity: 1;
+    max-width: 100%;
+    overflow: visible;
+}
+
+#headerContainer.toggle ul li:nth-of-type(3){
+    transition-delay: .3s;
+    opacity: 1;
+    max-width: 100%;
+    overflow: visible;
+}
